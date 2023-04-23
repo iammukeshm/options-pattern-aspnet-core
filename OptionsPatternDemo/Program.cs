@@ -15,6 +15,7 @@ builder.Services.AddOptions<WeatherOptions>().BindConfiguration(nameof(WeatherOp
 //     return true;
 // });
 
+var weatherOptions = builder.Configuration.GetSection(nameof(WeatherOptions)).Get<WeatherOptions>();
 
 var app = builder.Build();
 
